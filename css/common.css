@@ -255,3 +255,290 @@ header .drawer{
   height: auto;
 }
 
+.how{
+  background: #f5f6f7;
+}
+
+.how .inner{
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.how_to{
+  background: linear-gradient(#fff,#f5f6f7);
+  width: 40%;
+  display: inline-block;
+  border-radius: 30px;
+  padding-bottom: 100px;
+  line-height: 2;
+}
+
+.how_list li{
+  border: 2px solid #ddd;
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 2px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.faq{
+  background: #f5f6f7;
+}
+
+.faq .inner{
+  position: relative;
+  z-index: 2;
+}
+
+.faq .txt{
+  background: linear-gradient(#fff,#f5f6f7);
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 60px;
+}
+
+.faq .txt u li,p{
+  font-size: 16px;
+  line-height: 2.5;
+}
+
+.faq .txt ul li::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #555;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.faq .txt ul p strong{
+  color: #75a9ff;
+}
+
+.faq .more{
+  text-align: center;
+  background: #888;
+  width: 17%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.faq .more a{
+  color: #fff;
+  font-weight: bold;
+}
+
+.news{
+  background: #f5f6f7;
+  padding: 100px 0;
+}
+
+.news .inner{
+  position: relative;
+  z-index: 2;
+}
+
+.news .font3{
+  color: #555;
+}
+
+.news .txt{
+  background: linear-gradient(#fff,#f5f6f7);
+  border-radius: 30px;
+  padding: 60px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.news .txt ul li{
+  font-size: 16px;
+  line-height: 2;
+}
+
+.news .txt ul li strong{
+  color: #75a9ff;
+}
+
+.contact_btn{
+  background: #f5f6f7;
+  padding-bottom: 100px;
+}
+
+.contact_btn .btn{
+  text-align: center;
+  background: #ff82b2;
+  width: 17%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.contact_btn .btn a{
+  color: #fff;
+  font-weight: bold;
+}
+
+footer{
+  background: #555;
+  padding: 50px 50px 20px;
+}
+
+.footer_logo1 img{
+  width: 200px;
+}
+
+.footer_logo2 img{
+  width: 50px;
+}
+
+.pages{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.pages .grid{
+  width: 20%;
+  margin: 0 auto;
+}
+
+.pages .list{
+  border-left: 2px solid #fff;
+  padding-left: 10px;
+}
+
+.pages .grid li{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.pages .grid li a{
+  color: #fff;
+}
+
+
+.mail{
+  font-weight: bold;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.copyright{
+  text-align: center;
+  font-size: 10px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/*レスポンシブ対応*/
+@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 768px) {
+
+header a.logo{
+  top: 0;
+  padding: 10px;
+}
+/*PCサイズでの指定をリセット*/
+.top .inner{
+  display: unset;
+  margin-right: 0;
+  bottom: 0;
+}
+.app{
+  padding: 50px 50px 100px;
+  width: 80%;
+}
+.app_wrap{
+  display: unset;
+}
+.app .app_item{
+  margin: 0;
+}
+
+.app .app_img{
+  display: block;
+  width: 60%;
+  margin: 100px auto 0;
+}
+.app .app_img img{
+  width: 100%;
+  height: auto;
+}
+
+/*ハンバーガーメニュー作成*/
+header .drawer{
+  visibility: visible;
+  width: 24px;
+  right: 15px;
+  margin: 10px;
+  position: absolute;
+  border-top: solid 4px #aaaaaa;
+  cursor: pointer;
+  z-index: 100;
+}
+
+header .drawer::before,
+header .drawer::after{
+  content: "";
+  display: block;
+  width: 24px;
+  background: #aaaaaa;
+  height: 4px;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .drawer::before{
+  top: 6px;
+}
+header .drawer::after{
+  top: 15px;
+}
+/*ハンバーガーメニューの中身*/
+header .navbar{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #fff;
+}
+
+header .navbar ul{
+  display: block;
+  text-align: center;
+  float: none;
+  top: 20%;
+}
+
+header .navbar ul li a{
+  font: 18px;
+  line-height: 2;
+}
+/*JSの動作の設定*/
+body.nav-open header .drawer{
+  border-top: 0;
+}
+
+body.nav-open header .drawer::before{
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+body.nav-open header .drawer::after{
+  top: 9px;
+  transform: rotate(45deg);
+}
+}
